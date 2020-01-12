@@ -1,0 +1,317 @@
+@font-face {
+    font-family: Gotham;
+    src: url("../font/NVV-Gotham-Book.otf") format("opentype");
+}
+
+body{
+    font-family: Gotham;
+}
+
+.mainScroll {
+    height: 100vh;
+    overflow: auto;
+}
+
+.mainRandomLogo img {
+    max-width: 240px;
+    margin: auto;
+    display: block;
+}
+
+.mainRandom {
+    max-width: 450px;
+    width: 272px;
+    margin: auto;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mainRandomNumber{
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    color: transparent;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00539C, 0 0 30px #00539C, 0 0   40px #00539C, 0 0 55px #00539C, 0 0 75px #00539C;
+    margin-bottom: 50px;
+}
+
+.mainRandomTitle {
+    text-align: center;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #27c7fb;
+    margin-bottom: 50px;
+    white-space: nowrap;
+    position: relative;
+    height: 58px;
+}
+
+.mainRandomTitleContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mainRandomBorder {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    margin: 0 auto 30px;
+}
+
+.mainRandomBorderItem {
+    flex: 1;
+    text-align: center;
+    font-size: 150px;
+    color: #fff;
+}
+
+.mainRandomClear {
+    border: 2px solid #fff;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    margin: 0 auto 15px;
+    width: 70px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nameOfCustomer {
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.nameOfCustomerContent {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    width: auto;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+}
+
+.mainRandomButton button {
+    width: 200px;
+    height: 60px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.mainRandomButtonRun{
+    background: transparent;
+}
+.mainRandomButtonStop{
+    background: transparent;
+    display: none;
+}
+.mainRandomButtonWaiting{
+    background: transparent;
+    display: none;
+}
+.mainRandomButton {
+    text-align: center;
+}
+
+.setting {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+}
+.settingMain {
+    width: 320px;
+    margin-right: 20px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+.settingMainItem {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.settingMainItemTitle {
+    width: 140px;
+    flex-shrink: 0;
+}
+.settingMainItemForm {
+    flex: 1;
+}
+
+input::placeholder { /* Chrome/Opera/Safari */
+    color: #999999;
+}
+
+
+.settingIcon {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+.select2-container{
+    width: 100% !important;
+}
+
+.modal-content {
+    background: #0e3117;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+button.close {
+    color: #fff;
+}
+
+.modal-body {
+    padding: 50px 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.modal-body h1{
+    font-size: 90px;
+    font-weight: bold;
+}
+
+
+
+.listNum {
+    width: 90%;
+    margin: 0 auto 20px;
+    display: none;
+}
+
+.listNumIcon {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.listNumMain {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    color: #fff;
+    background: #040621;
+}
+
+.listNumMain ul {
+    padding: 0;
+    clear: both;
+    max-height: 30vh;
+    overflow: auto;
+}
+
+/* width */
+.listNumMain ul::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.listNumMain ul::-webkit-scrollbar-track {
+    background: #040621;
+}
+
+/* Handle */
+.listNumMain ul::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+.listNumMain ul::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.listNumMain ul li {
+    list-style: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    margin-top: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+.listNumMain ul li:hover {
+    background: #ab3973;
+}
+
+.listNumMainOption {
+    display: flex;
+    justify-content: space-between;
+}
+.listNumMainShowModal {
+    font-size: 12px;
+    line-height: 12px;
+    display: flex;
+    padding: 4px 0;
+}
+.listNumMainShowModal input {
+    margin-right: 5px;
+}
+.listNumMainDeleteAll {
+    display: flex;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.listNumMainDeleteAll:hover {
+    background: #d33;
+    cursor: pointer;
+    color: #fff;
+}
+.listNumMainDeleteAll i {
+    margin-right: 5px;
+}
+
+.listNumMainDeleteItem {
+    color: #ccc;
+    font-size: 12px;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    padding: 0 5px;
+}
+.listNumMainDeleteItem:hover {
+    color: #d33;
+}
+
+
+.modal-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    min-width: 500px;
+    margin: 0;
+}
+@media (max-width: 576px){
+    .modal-dialog {
+        min-width: 90%;
+    }
+
+    .mainRandomTitle {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+}
