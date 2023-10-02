@@ -39,7 +39,7 @@ $(document).ready(function(){
         location.reload();
     }
     if (maxSize == null) {
-        maxSize = max.length;
+        maxSize = max.toString().length;
     }
 
 
@@ -123,6 +123,12 @@ $(document).ready(function(){
         $('.listNum').toggle();
     });
 
+     $(document).on("click", ".btnResetNumber", function(){
+         console.log("btn-reset-number");
+        $('.mainRandomBorderItem').text(0);
+    });
+
+
     //save config
     $(document).on("click", ".btnSbm", function(){
         var fileUpload = $("#fileUpload")[0];
@@ -130,6 +136,7 @@ $(document).ready(function(){
         if (fileUpload.value != null && fileUpload.value !== "" && fileUpload.files.length !== 0) {
             uploadFile(fileUpload);
         }
+
         setTimeout(function () {
             var maxInput = $("input[name='max']").val();
             if (maxInput == null || maxInput === "") {

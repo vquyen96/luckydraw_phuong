@@ -85,31 +85,38 @@
 			<div class="settingMainItem">
 				<div class="settingMainItemTitle">Bỏ qua :</div>
 				<div class="settingMainItemForm">
-					<!-- <select class="selPass form-control" name="pass" multiple="multiple"> -->
-						<input type="text" name="pass" class=" form-control" placeholder="VD: 2,3, ....">
-				</select>
+					<input type="text" name="pass" class=" form-control" placeholder="VD: 2,3, ....">
 				</div>
 			</div>
             <div class="settingMainItem">
                 <div class="settingMainItemTitle">Số lượng ô :</div>
                 <div class="settingMainItemForm">
-                    <!-- <select class="selPass form-control" name="pass" multiple="multiple"> -->
                     <input type="number" name="maxSize" class=" form-control" placeholder="VD: 3">
-                    </select>
                 </div>
             </div>
 			<div class="settingMainItem">
 				<div class="settingMainItemTitle">Upload danh sách</div>
 				<div class="settingMainItemForm">
-					<!-- <select class="selPass form-control" name="pass" multiple="multiple"> -->
-						<input type="file" id="fileUpload" class="form-control"/>
-				</select>
+					<input type="file" id="fileUpload" class="form-control"/>
 				</div>
 				
 			</div>
-<!-- 			<input type="file" id="fileUpload" />
-			<input type="button" id="upload" value="Upload" /> -->
-			
+			<div class="settingMainItem">
+				<div class="settingMainItemTitle">Tải về danh sách mãu</div>
+				<div class="settingMainItemForm">
+					<a href="danhsach.xlsx">Tải về</a>
+				</div>
+
+			</div>
+			<div class="settingMainItem">
+				<div class="settingMainItemTitle">Upload phông nền</div>
+				<div class="settingMainItemForm">
+					<input type="file" id="fileUploadBackGround" class="form-control"/>
+				</div>
+
+			</div>
+
+
 			<div class="settingMainItem">
 				<div class="settingMainItemTitle">
 					<button class="btnListNum btn btn-success">Danh sách</button>
@@ -135,7 +142,7 @@
 	      <div class="modal-header">
 	        <h5 class="modal-title">Xin chúc mừng con số may mắn</h5>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
+	          <span aria-hidden="true" class="btnResetNumber">&times;</span>
 	        </button>
 	      </div>
 	      <div class="modal-body">
