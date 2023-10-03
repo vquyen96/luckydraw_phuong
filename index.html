@@ -50,9 +50,9 @@
 				<!--		</div>-->
 				<div class="listNumMain">
 					<div class="listNumMainOption">
-						<div class="listNumMainShowModal">
-							<input type="checkbox" name="">
-							<label> Thông báo kết quả</label>
+						<div class="listNumMainItem">
+<!--							<input type="checkbox" name="">-->
+<!--							<label> Thông báo kết quả</label>-->
 						</div>
 						<div class="listNumMainDeleteAll">
 							<i class="far fa-times-circle"></i>
@@ -89,9 +89,21 @@
 				</div>
 			</div>
             <div class="settingMainItem">
+				<div class="settingMainItemTitle">Tự động bỏ qua :</div>
+				<div class="settingMainItemForm autoPassNumber">
+					<input type="checkbox" name="auto_pass" class="">
+				</div>
+			</div>
+            <div class="settingMainItem">
+				<div class="settingMainItemTitle">Thông báo kết quả :</div>
+				<div class="settingMainItemForm listNumMainShowModal">
+					<input type="checkbox" name="show_modal" class="">
+				</div>
+			</div>
+            <div class="settingMainItem">
                 <div class="settingMainItemTitle">Số lượng ô :</div>
                 <div class="settingMainItemForm">
-                    <input type="number" name="maxSize" class=" form-control" placeholder="VD: 3">
+                    <input type="number" name="maxSize" class="form-control" placeholder="VD: 3">
                 </div>
             </div>
 			<div class="settingMainItem">
@@ -108,14 +120,6 @@
 				</div>
 
 			</div>
-			<div class="settingMainItem">
-				<div class="settingMainItemTitle">Upload phông nền</div>
-				<div class="settingMainItemForm">
-					<input type="file" id="fileUploadBackGround" class="form-control"/>
-				</div>
-
-			</div>
-
 
 			<div class="settingMainItem">
 				<div class="settingMainItemTitle">
@@ -141,8 +145,8 @@
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <h5 class="modal-title">Xin chúc mừng con số may mắn</h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true" class="btnResetNumber">&times;</span>
+	        <button type="button" class="close btnResetNumber" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true" class="">&times;</span>
 	        </button>
 	      </div>
 	      <div class="modal-body">

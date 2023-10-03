@@ -167,15 +167,12 @@ input::placeholder { /* Chrome/Opera/Safari */
     width: 100% !important;
 }
 
-.modal-content {
-    background: #0e3117;
-    color: #fff;
-    border: 2px solid #fff;
-}
+/*.modal-content {*/
+/*    background: #0e3117;*/
+/*    color: #fff;*/
+/*    border: 2px solid #fff;*/
+/*}*/
 
-button.close {
-    color: #fff;
-}
 
 .modal-body {
     padding: 50px 0;

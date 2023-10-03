@@ -62,9 +62,14 @@ $(document).ready(function(){
     //get pass is selected
     var pass = localStorage.getItem("pass");
 
-    pass != null ? pass = pass.split(",") : pass = [];
+    pass != null && pass != "" ? pass = pass.split(",") : pass = [];
     for (var i = 0; i < pass.length; i++) pass[i] = parseInt(pass[i]);
     $("input[name='pass']").val(pass.toString());
+
+    var isAutoPass = localStorage.getItem("auto_pass");
+    if (isAutoPass == null || isAutoPass === "true") {
+        $(".autoPassNumber input[type='checkbox']").attr('checked','checked')
+    }
 
     var ran = 0;
     var ranGen = 0;
@@ -78,6 +83,7 @@ $(document).ready(function(){
     });
 
     function runRandom(size) {
+        console.log(pass)
         runRandomInterval = setInterval(function(){
             do{
                 ranGen = Math.floor((Math.random() * max) + 1);
@@ -85,6 +91,16 @@ $(document).ready(function(){
             while(pass.indexOf(ranGen) !== -1 || listNum.indexOf(numberToString(ranGen)) !== -1);
             displayNumber(ranGen, size);
         }, 50);
+    }
+
+    function addPassNumber(number) {
+        var isAutoPass = localStorage.getItem("auto_pass");
+        if (isAutoPass == null || isAutoPass == "true") {
+            console.log(pass)
+            pass.push(number)
+            localStorage.setItem("pass", pass.toString());
+            $("input[name='pass']").val(pass.toString());
+        }
     }
 
 
@@ -114,6 +130,7 @@ $(document).ready(function(){
                 showModal(ran, nameCustomer);
                 $(".nameOfCustomerContent").text(nameCustomer);
                 addNumberToList(ran);
+                addPassNumber(ran)
             }
             console.log(i);
         }, 800);
@@ -126,6 +143,7 @@ $(document).ready(function(){
      $(document).on("click", ".btnResetNumber", function(){
          console.log("btn-reset-number");
         $('.mainRandomBorderItem').text(0);
+        $('.nameOfCustomerContent').text("Người may mắn");
     });
 
 
@@ -180,6 +198,14 @@ $(document).ready(function(){
         }
     });
 
+    $(".autoPassNumber input[type='checkbox']").change(function() {
+        if(this.checked) {
+            localStorage.setItem("auto_pass", true);
+        } else {
+            localStorage.setItem("auto_pass", false);
+        }
+    });
+
     if ($(this).is(":checked")) {
         selected.push($(this).attr('name'));
     }
@@ -194,10 +220,14 @@ $(document).ready(function(){
     });
 
     function generatePass(passStr) {
-        localStorage.setItem("pass", passStr);
-        var passArr = passStr.split(",");
-        for (var i = 0; i < passArr.length; i++) passArr[i] = parseInt(passArr[i]);
-        $("input[name='pass']").val(passArr.toString());
+        var passArr = [];
+        if (passStr != null && passStr != "") {
+            localStorage.setItem("pass", passStr);
+            passArr = passStr.split(",");
+            console.log(passArr);
+            for (var i = 0; i < passArr.length; i++) passArr[i] = parseInt(passArr[i]);
+            $("input[name='pass']").val(passArr.toString());
+        }
         return passArr;
     }
 
@@ -266,7 +296,6 @@ $(document).ready(function(){
             var filtered = listCustomer.filter(function(el) {
                 return el.stt === stt;
             });
-            console.log(filtered);
             if(filtered.length !== 0) {
                 return filtered[0].name;
             }
